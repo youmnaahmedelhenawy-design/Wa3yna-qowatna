@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>وعينا قوتنا — Wa3yena Qowatna</title>
+  <meta name="description" content="مبادرة طلابية لرفع الوعي الثقافي، الاجتماعي، الصحي والبيئي — Wa3yena Qowatna" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://i.postimg.cc/gr267tnQ/wa3yena.jpg" />
+
+  <style>
+    :root{
+      --bg:#001f3f;
+      --accent:#b58c27;
+      --muted:#f5f1e6;
+      --card:#003366;
+      --glass: rgba(0,51,102,0.7);
+      --radius:14px;
+      --ff: 'Cairo', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--ff);
+      background:url('https://i.postimg.cc/Z5kKvvKN/Whats-App-Image-2025-11-15-at-01-40-50-69bc363b.jpg') no-repeat center center fixed;
+      background-size:cover;
+      color:var(--muted);
+      line-height:1.6;
+      padding-bottom:60px;
+    }
+
+    .bg-overlay{
+      background:rgba(0,0,0,0.25);
+      min-height:100vh;
+      padding-bottom:60px;
+    }
+
+    /* NAV */
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:18px 24px;
+      max-width:1100px;
+      margin:18px auto;
+      background:rgba(255,255,255,0.04);
+      border-radius:12px;
+      backdrop-filter:blur(6px);
+      box-shadow:0 6px 30px rgba(0,0,0,0.35);
+    }
+
+    .brand{display:flex;gap:12px;align-items:center}
+    .brand img{
+      width:64px;height:64px;object-fit:cover;
+      border-radius:10px;
+      border:2px solid rgba(181,140,39,0.12)
+    }
+    .brand h1{margin:0;font-size:1.15rem;font-weight:700;color:var(--muted)}
+    .brand p{margin:0;font-size:0.85rem;color:rgba(245,241,230,0.75)}
+
+    nav ul{
+      display:flex;
+      gap:12px;
+      list-style:none;
+      margin:0;
+      padding:0;
+    }
+
+    nav a{
+      padding:8px 12px;
+      border-radius:8px;
+      text-decoration:none;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    nav a:hover{
+      background:rgba(181,140,39,0.1);
+      color:var(--accent);
+    }
+
+    .cta{
+      background:var(--accent);
+      color:#07233b;
+      padding:8px 14px;
+      border-radius:10px;
+      font-weight:700;
+      text-decoration:none;
+    }
+
+    .hamburger{
+      display:none;
+      border:none;
+      background:transparent;
+      font-size:22px;
+      color:var(--muted);
+      cursor:pointer;
+    }
+
+    /* HERO */
+    .hero, .content-card{
+      max-width:1100px;
+      margin:22px auto;
+      padding:30px;
+      border-radius:16px;
+      background:var(--glass);
+      box-shadow:0 10px 40px rgba(0,0,0,0.5);
+      text-align:right;
+    }
+
+    .hero h2, .content-card h3, .content-card h4,
+    .hero p, .content-card p, .content-card li{
+      color:#fff;
+      text-shadow:1px 1px 3px rgba(0,0,0,0.7);
+    }
+
+    main{max-width:1100px;margin:18px auto;padding:0 18px}
+
+    .about{
+      display:grid;
+      grid-template-columns:1fr 300px;
+      gap:14px;
+    }
+
+    footer{
+      max-width:1100px;
+      margin:30px auto;
+      padding:18px;
+      text-align:center;
+      color:rgba(245,241,230,0.75)
+    }
+
+    @media(max-width:900px){
+      .about{grid-template-columns:1fr}
+    }
+
+    @media(max-width:680px){
+      nav ul{display:none}
+      .hamburger{display:block}
+      .brand h1{font-size:1rem}
+    }
+  </style>
+
+  <script>
+    // تفعيل منيو الموبايل
+    document.addEventListener("DOMContentLoaded", function(){
+      const btn = document.querySelector(".hamburger");
+      const nav = document.getElementById("main-nav");
+
+      btn.addEventListener("click", () => {
+        nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+      });
+    });
+  </script>
+</head>
+
+<body>
+<div class="bg-overlay">
+
+  <!-- NAVIGATION -->
+  <header class="nav">
+    <div class="brand">
+      <img src="https://i.postimg.cc/gr267tnQ/wa3yena.jpg" alt="شعار وعينا قوتنا">
+      <div>
+        <h1>وعينا قوتنا</h1>
+        <p>مبادرة طلابية — اتحاد طلاب المدرسة</p>
+      </div>
+    </div>
+
+    <nav>
+      <button class="hamburger">☰</button>
+      <ul id="main-nav">
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="#about">عن المبادرة</a></li>
+        <li><a href="#competition">المسابقات</a></li>
+        <li><a href="#contact">تواصل معنا</a></li>
+      </ul>
+    </nav>
+
+    <a class="cta" href="#contact">انضمي الآن</a>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <h2>مرحباً بكِ في مبادرة <span style="color:var(--accent)">وعينا قوتنا</span></h2>
+    <p>منصة طلابية لرفع الوعي (ثقافي، صحي، بيئي، اجتماعي). انضمي إلينا في أنشطة ومسابقات ممتعة تمنحك فرصة التعلم والتميز.</p>
+  </section>
+
+  <!-- ABOUT -->
+  <main>
+    <section class="about" id="about">
+      <div class="content-card">
+        <h3>عن المبادرة</h3>
+        <p>مبادرة أطلقها اتحاد الطلاب بهدف رفع وعي الطالبات في مختلف المجالات الثقافية والصحية والبيئية والاجتماعية.</p>
+
+        <h4 style="color:var(--accent)">أهدافنا</h4>
+        <ul>
+          <li>رفع مستوى الوعي الثقافي والاجتماعي.</li>
+          <li>تنمية مهارات التفكير النقدي.</li>
+          <li>تعزيز الثقافة الصحية والبيئية.</li>
+          <li>تحفيز روح التعاون والمبادرة.</li>
+        </ul>
+      </div>
+
+      <div>
+        <img src="https://i.postimg.cc/KjsJjyPz/Whats-App-Image-2025-11-15-at-01-40-50-69bc363b.jpg"
+             style="width:100%;border-radius:12px;max-height:320px;object-fit:cover;">
+      </div>
+    </section>
+
+    <!-- COMPETITION -->
+    <section id="competition" class="content-card">
+      <h3>مسابقة "أفضل بحث"</h3>
+      <p>ندعو الطالبات لتقديم أبحاث قصيرة حول أي نوع من أنواع الوعي.</p>
+
+      <h4>شروط المشاركة:</h4>
+      <ul>
+        <li>تقديم البحث بخط واضح.</li>
+        <li>الحد الأدنى صفحتين.</li>
+        <li>آخر موعد للتسليم: <strong>الأحد القادم</strong>.</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="content-card">
+      <h2>تواصل معنا</h2>
+      <p>للاستفسار يرجى التواصل عبر قناة الواتساب:</p>
+      <a href="https://whatsapp.com/channel/0029VbBuNcpEFeXq2yKnOT2R"
+         target="_blank"
+         style="color:#ffdd57;font-weight:bold;text-decoration:none">
+         اضغطي هنا للانتقال لقناة الواتساب
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Wa3yena Qowatna — جميع الحقوق محفوظة
+  </footer>
+
+</div>
+</body>
+</html>
