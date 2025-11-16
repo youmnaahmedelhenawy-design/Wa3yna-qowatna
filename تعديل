@@ -110,18 +110,10 @@
       text-align:right;
     }
 
-    .hero h2, .content-card h3, .content-card h4,
-    .hero p, .content-card p, .content-card li{
-      color:#fff;
-      text-shadow:1px 1px 3px rgba(0,0,0,0.7);
-    }
-
     main{max-width:1100px;margin:18px auto;padding:0 18px}
 
     .about{
-      display:grid;
-      grid-template-columns:1fr 300px;
-      gap:14px;
+      display:block;
     }
 
     footer{
@@ -132,10 +124,6 @@
       color:rgba(245,241,230,0.75)
     }
 
-    @media(max-width:900px){
-      .about{grid-template-columns:1fr}
-    }
-
     @media(max-width:680px){
       nav ul{display:none}
       .hamburger{display:block}
@@ -144,7 +132,6 @@
   </style>
 
   <script>
-    // تفعيل منيو الموبايل
     document.addEventListener("DOMContentLoaded", function(){
       const btn = document.querySelector(".hamburger");
       const nav = document.getElementById("main-nav");
@@ -202,11 +189,6 @@
           <li>تعزيز الثقافة الصحية والبيئية.</li>
           <li>تحفيز روح التعاون والمبادرة.</li>
         </ul>
-      </div>
-
-      <div>
-        <img src="https://i.postimg.cc/KjsJjyPz/Whats-App-Image-2025-11-15-at-01-40-50-69bc363b.jpg"
-             style="width:100%;border-radius:12px;max-height:320px;object-fit:cover;">
       </div>
     </section>
 
